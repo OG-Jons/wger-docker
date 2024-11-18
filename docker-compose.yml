@@ -16,7 +16,7 @@ services:
     env_file:
       - ./config/prod.env
     volumes:
-      - static:/home/wger/static
+      - /media/wger/static:/home/wger/static
     expose:
       - 8000
     healthcheck:
@@ -73,7 +73,7 @@ services:
     env_file:
       - ./config/prod.env
     volumes:
-      - media:/home/wger/media
+      - /media/wger/media:/home/wger/media
     depends_on:
       web:
         condition: service_healthy
