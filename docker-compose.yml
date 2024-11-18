@@ -7,6 +7,7 @@
 
 services:
   web:
+    container_name: wger
     image: wger/server:latest
     depends_on:
       db:
