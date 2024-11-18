@@ -17,8 +17,8 @@ services:
       - ./config/prod.env
     volumes:
       - /media/wger/static:/home/wger/static
-    expose:
-      - 8000
+    ports:
+      - "2285:8000"
     healthcheck:
       test: wget --no-verbose --tries=1 --spider http://localhost:8000
       interval: 10s
