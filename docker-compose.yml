@@ -33,8 +33,7 @@ services:
       - web
     volumes:
       - type: bind
-        source: ./config/nginx.conf
-        target: /etc/nginx/nginx.conf
+        target: /etc/nginx/conf.d/default.conf
         content: |
           upstream wger {
               server web:8000;
