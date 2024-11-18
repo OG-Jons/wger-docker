@@ -32,9 +32,9 @@ services:
     depends_on:
       - web
     volumes:
-      - type: volume
+      - type: bind
         source: ./config/nginx.conf
-        target: /etc/nginx/conf.d/default.conf
+        target: /etc/nginx/nginx.conf
         content: |
           upstream wger {
               server web:8000;
