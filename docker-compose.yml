@@ -32,7 +32,7 @@ services:
     depends_on:
       - web
     volumes:
-      - type: bind
+      - type: volume
         source: ./config/nginx.conf
         target: /etc/nginx/conf.d/default.conf
         content: |
